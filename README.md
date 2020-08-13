@@ -67,33 +67,39 @@ You can find more information about the platform on the [Heroku Dev Center](http
 
 ## Server category rules
 
-* Sandbox server
+- Sandbox server
+
   - You can find the official sandbox server at [https://github.com/js13kGames/js13kserver](https://github.com/js13kGames/js13kserver).
 
-* Package size still below 13 kB
+- Package size still below 13 kB
+
   - Game package will contain all the game code and assets, for the client and the server.
 
-* Sandboxed environment
+- Sandboxed environment
+
   - Your game will run in a node.js based sandbox environment. That means you will not really use node. You cannot require modules and your own modules shipped by your 13k pack.
 
-* Do not leak the sandbox
+- Do not leak the sandbox
+
   - This is not a hacking competition. This is a way to help the competition admins, the site persistence, and you. Do not touch the `procfile` and the skeleton code.
 
-* Socket.io client lib
+- Socket.io client lib
+
   - You can use it. Simply add `<script src="/socket.io/socket.io.js"></script>` to your HTML and that will be loaded. No server configuration will be needed. The sandbox already did it.
 
-* Google's free STUN servers are the only allowed external services:
-  * stun.l.google.com:19302
-  * stun1.l.google.com:19302
-  * stun2.l.google.com:19302
-  * stun3.l.google.com:19302
-  * stun4.l.google.com:19302
-
+- Google's free STUN servers are the only allowed external services:
+  - stun.l.google.com:19302
+  - stun1.l.google.com:19302
+  - stun2.l.google.com:19302
+  - stun3.l.google.com:19302
+  - stun4.l.google.com:19302
 
 * Can I test the sandbox before submitting?
+
   - Yes, you can and you must! Installing and getting it running is simple. Visit the project page at [https://github.com/js13kGames/js13kserver](https://github.com/js13kGames/js13kserver).
 
 * Is there any example? How do I develop my game using the sandbox server?
+
   - There's a simple "Rock, Paper, Scissors" example in the public folder.
 
 * I have more questions!
@@ -101,17 +107,21 @@ You can find more information about the platform on the [Heroku Dev Center](http
 
 ## FAQ
 
-* Can I minify the server side code?
+- Can I minify the server side code?
+
   - Yes, but you have to keep the readable code also.
 
-* Can I add more npm packages?
+- Can I add more npm packages?
+
   - Yes, but you cannot use them in your game code.
 
-* What files count in the 13kb limit?
+- What files count in the 13kb limit?
+
   - All files in the `public` folder.
 
-* Can I deploy new code after I submited the entry?
+- Can I deploy new code after I submited the entry?
+
   - Yes, but you have to resubmit your entry on the site also.
 
-* Can I modify the `procfile` or the skeleton code?
+- Can I modify the `procfile` or the skeleton code?
   - No
