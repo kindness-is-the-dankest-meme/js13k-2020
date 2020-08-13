@@ -22,37 +22,48 @@ describe("storage", () => {
       await interface.clear();
       assert.equal(await interface.get(key, value), value);
     });
+
     it("set value", async () => {
       assert.equal(await interface.set(key, value, false), true);
     });
+
     it("get value", async () => {
       assert.equal(await interface.get(key, "", false), value);
     });
+
     it("size match", async () => {
       assert.equal(await interface.size(), length);
     });
+
     it("update value", async () => {
       assert.equal(await interface.set(key, value2, false), true);
     });
+
     it("value updated", async () => {
       assert.equal(await interface.get(key, "", false), value2);
     });
+
     it("size updated", async () => {
       assert.equal(await interface.size(), length2);
     });
+
     it("get default json", async () => {
       await interface.clear();
       assert.equal(await interface.get(key, true), true);
     });
+
     it("set json", async () => {
       assert.equal(await interface.set(key, true), true);
     });
+
     it("get json", async () => {
       assert.equal(await interface.get(key, true), true);
     });
+
     it("update json", async () => {
       assert.equal(await interface.set(key, false), true);
     });
+
     it("value json", async () => {
       assert.equal(await interface.get(key, false), false);
     });
@@ -65,6 +76,7 @@ describe("storage", () => {
       assert.equal(await interface.set(key2, value2), true);
       assert.equal(await interface.key(0), key);
     });
+
     it("last key", async () => {
       assert.equal(await interface.key(1), key2);
     });
@@ -76,6 +88,7 @@ describe("storage", () => {
       assert.equal(await interface.set(key, value), true);
       assert.equal(await interface.length(), 1);
     });
+
     it("two key", async () => {
       assert.equal(await interface.set(key2, value2), true);
       assert.equal(await interface.length(), 2);
@@ -89,9 +102,11 @@ describe("storage", () => {
       await interface.remove(key);
       assert.equal(await interface.get(key), undefined);
     });
+
     it("length 0", async () => {
       assert.equal(await interface.size(), 0);
     });
+
     it("size 0", async () => {
       assert.equal(await interface.length(), 0);
     });
@@ -103,12 +118,15 @@ describe("storage", () => {
       assert.equal(await interface.set(key2, value2), true);
       await interface.clear();
     });
+
     it("remove key", async () => {
       assert.equal(await interface.get(key), undefined);
     });
+
     it("length 0", async () => {
       assert.equal(await interface.size(), 0);
     });
+
     it("size 0", async () => {
       assert.equal(await interface.length(), 0);
     });
@@ -119,14 +137,17 @@ describe("storage", () => {
       await interface.clear();
       assert.equal(await interface.set(limit, "", false), true);
     });
+
     it("set max value", async () => {
       await interface.clear();
       assert.equal(await interface.set("", limit, false), true);
     });
+
     it("too big key", async () => {
       await interface.clear();
       assert.equal(await interface.set(limit, "1", false), false);
     });
+
     it("too big value", async () => {
       await interface.clear();
       assert.equal(await interface.set("1", limit, false), false);
