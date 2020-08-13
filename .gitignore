@@ -102,3 +102,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# js13kserver starter
+/.idea
+/.vscode
+/dist.zip
+*.sqlite
