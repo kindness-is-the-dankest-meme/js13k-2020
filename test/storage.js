@@ -133,5 +133,5 @@ describe('storage', () => {
             assert.equal(await interface.set('1', limit, false), false);
         });
     });
-    
+
 });
