@@ -1,5 +1,3 @@
-"use strict";
-
 (function () {
   let socket, //Socket.IO client
     buttons, //Button elements
